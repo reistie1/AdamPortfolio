@@ -17,8 +17,16 @@ jobs:
       with:
         dotnet-version: 10.0.x
 
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install NPM packages
+      run: npm install
+
     - name: Publish
-      run: dotnet publish ./AdamPostProductionPortfolio/AdamPostProductionPortfolio.csproj -c Release -o build
+      run: dotnet publish AdamPostProductionPortfolio/AdamPostProductionPortfolio.csproj -c Release -o build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
