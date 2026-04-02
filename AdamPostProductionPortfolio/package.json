@@ -4,7 +4,6 @@
     "tailwind:watch": "tailwindcss -i ./wwwroot/app.css -o ./wwwroot/css/dist.css --watch"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.2.2",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
     "tailwindcss": "^3.4.14"
