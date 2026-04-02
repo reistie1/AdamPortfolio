@@ -30,7 +30,8 @@ jobs:
       working-directory: AdamPostProductionPortfolio
 
     - name: Publish Blazor WASM
-      run: dotnet publish AdamPostProductionPortfolio/AdamPostProductionPortfolio.csproj -c Release -o build
+      run: dotnet publish -c Release -o ../build
+      working-directory: AdamPostProductionPortfolio
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
