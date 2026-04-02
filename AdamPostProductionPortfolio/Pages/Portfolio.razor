@@ -1,0 +1,64 @@
+@namespace AdamPostProductionPortfolio.Pages
+@using AdamPostProductionPortfolio.Components
+@page "/portfolio"
+
+<PageTitle>Portfolio</PageTitle>
+
+<div class="min-h-screen w-full bg-neutral-900 text-white">
+
+    <section 
+        class="max-w-7xl mx-auto px-6 py-24 space-y-20"
+        role="region"
+        aria-labelledby="portfolio-heading">
+
+        <!-- Header -->
+        <div class="text-center space-y-4">
+            <h1 id="portfolio-heading" class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+                Portfolio
+            </h1>
+
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                A curated gallery of projects featuring my audio post‑production work.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div 
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14"
+            role="list"
+            aria-label="Portfolio project gallery">
+
+            <PortfolioCard 
+                ProjectTitle="In the Hive" 
+                Description="Dialogue editing and clean up. Composed multiple pieces of music, general backgrounds as well as the mix." 
+                VideoSrc="https://www.youtube.com/embed/LamPFDGfSdA" />
+
+            <PortfolioCard 
+                ProjectTitle="World of Warcraft: Shadowlands Re-Design" 
+                Description="Complete re-design of the original Shadowlands trailer, including sound design, music composition, and mixing." 
+                VideoSrc="https://www.youtube.com/embed/MAGPuQPw4BE" />
+
+            <PortfolioCard 
+                ProjectTitle="Short Sound Design Compilation" 
+                Description="School project with specific emphasis on sound designing specific elements in a scene." 
+                VideoSrc="https://www.youtube.com/embed/njpmYoC-m34" />
+
+            <PortfolioCard 
+                ProjectTitle="Azereus Sound Re-Design" 
+                Description="Overhaul of the original Azereus trailer audio. Excluding music for better audibility of the sound design." 
+                VideoSrc="https://www.youtube.com/embed/AVuasAxLs-I" />
+
+            <PortfolioCard 
+                ProjectTitle="Secret Level - Unreal Tournament Sound Re-Design" 
+                Description="Sound Re-Design using a mix of original source material in addition to some manipulated sound library assets." 
+                VideoSrc="https://www.youtube.com/embed/lyU7vOwprL0" />
+
+            <PortfolioCard 
+                ProjectTitle="Astartes Sound Re-Design" 
+                Description="Relaced all initial audio with an all new audio design." 
+                VideoSrc="https://www.youtube.com/embed/na1wWXtybxc" />
+
+        </div>
+
+    </section>
+</div>

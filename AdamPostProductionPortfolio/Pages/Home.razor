@@ -1,0 +1,61 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div 
+    class="relative h-screen w-full bg-cover bg-center" 
+    style="background-image: url('assets/img/background.jpg');"
+    role="img"
+    aria-label="Background image for homepage">
+
+    <div class="relative z-10 flex items-center justify-center h-full px-6">
+
+        <div class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
+
+            <!-- Headshot -->
+            <img 
+                src="assets/img/headshot_small.png" 
+                alt="Portrait of Adam Reist" 
+                class="w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full shadow-[0_0_40px_rgba(255,255,255,0.08)] object-cover"
+            />
+
+            <!-- Text Content -->
+            <div class="text-center md:text-left max-w-xl">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight">
+                    Adam Reist
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-300 mt-4 tracking-wide">
+                    Sound Design & Audio Post‑Production
+                </p>
+
+                <p class="text-lg sm:text-xl text-gray-300 mt-4 tracking-wide">
+                    Crafting Clarity, Depth & Impact
+                </p>
+
+                <button 
+                    class="mt-8 px-8 py-3 rounded-full bg-white/10 text-white backdrop-blur-sm 
+                           hover:bg-white/20 transition focus:outline-none focus:ring-2 
+                           focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-900"
+                    aria-label="Hear my work" @onclick="NavigateToPortfolio">
+                    Hear My Work
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Optional overlay for readability -->
+    <div class="absolute inset-0 bg-black/40"></div>
+</div>
+
+@code {
+    [Inject]
+    public NavigationManager Navigation { get; set; }
+
+    private void NavigateToPortfolio()
+    {
+        Navigation.NavigateTo("/portfolio");
+    }
+}

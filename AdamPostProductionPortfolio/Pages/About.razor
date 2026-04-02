@@ -1,0 +1,92 @@
+@page "/about"
+
+<PageTitle>About</PageTitle>
+
+<div class="min-h-screen w-full bg-neutral-900 text-white flex items-center">
+    <section 
+        class="max-w-3xl mx-auto px-6 py-24 space-y-20 text-center"
+        role="region"
+        aria-labelledby="about-heading">
+
+        <!-- Intro -->
+        <div class="space-y-6">
+            <h1 id="about-heading" class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+                Hi, I’m Adam Reist.
+            </h1>
+
+            <p class="text-xl sm:text-2xl text-gray-300">
+                Shaping stories through sound.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed">
+                I’m a post‑production sound engineer specializing in sound design, dialogue editing and audio post clean up
+                for film, TV, animation, documentaries and web content. My work focuses on clarity, 
+                emotion, with story telling being at the forefront.
+            </p>
+        </div>
+
+        <!-- What I Do -->
+        <div class="space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What I Do</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 text-gray-300"
+                role="list">
+                <li>Dialogue Editing</li>
+                <li>Sound Design</li>
+                <li>Audio Restoration</li>
+                <li>Foley / ADR Cleanup</li>
+            </ul>
+        </div>
+
+        <!-- My Approach -->
+        <div class="space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">My Approach</h2>
+            <p class="text-gray-400 leading-relaxed">
+                I believe great sound is invisible — you feel it before you notice it. My work blends technical precision with creative intuition, and emotional impact 
+                across film, TV, animation, documentaries, and web content. 
+                Whether I’m crafting a soundscape or restoring dialogue, my goal is always the same: support the story and elevate the experience.
+            </p>
+        </div>
+
+        <!-- Background -->
+        <div class="space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Background</h2>
+            <p class="text-gray-400 leading-relaxed">
+                I recently graduated from a year long post‑production program, where I focused on sound design, dialogue editing, and audio cleanup. During that time, 
+                I worked on a wide range of school and personal projects across film, animation, documentaries, and digital media. 
+                These projects helped me to develop a strong foundation through sound — skills I’m now applying as I build my professional career.
+            </p>
+        </div>
+
+        <!-- Tools -->
+        <div class="space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Tools I Work With</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-gray-300"
+                role="list">
+                <li>Pro Tools</li>
+                <li>Reaper</li>
+                <li>Abelton</li>
+                <li>iZotope RX</li>
+            </ul>
+        </div>
+
+        <!-- Contact Button -->
+        <div class="pt-10">
+            <a href="/contact"
+               class="px-10 py-4 rounded-full bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 transition inline-block focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-900"
+               aria-label="Go to contact page" @onclick="NavigateToContact">
+                Contact Me
+            </a>
+        </div>
+
+    </section>
+</div>
+
+@code {
+    [Inject]
+    public NavigationManager Navigation { get; set; }
+
+    private void NavigateToContact()
+    {
+        Navigation.NavigateTo("/contact");
+    }
+}
