@@ -15,7 +15,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 10.0.x
+        dotnet-version: 8.0.x
 
     - name: Setup Node
       uses: actions/setup-node@v3
@@ -23,7 +23,7 @@ jobs:
         node-version: '18'
 
     - name: Install NPM packages
-      run: npm install
+      run: npm ci
       working-directory: AdamPostProductionPortfolio
 
     - name: Publish
