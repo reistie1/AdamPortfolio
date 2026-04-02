@@ -24,6 +24,7 @@ jobs:
 
     - name: Install NPM packages
       run: npm install
+      working-directory: AdamPostProductionPortfolio
 
     - name: Publish
       run: dotnet publish AdamPostProductionPortfolio/AdamPostProductionPortfolio.csproj -c Release -o build
