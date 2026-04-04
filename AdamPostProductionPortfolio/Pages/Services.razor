@@ -96,6 +96,7 @@
 
     private void NavigateToContact()
     {
-        Navigation.NavigateTo("/contact");
+        var absoluteUri = Navigation.ToAbsoluteUri("contact");
+        Navigation.NavigateTo(absoluteUri.ToString());
     }
 }
