@@ -37,7 +37,7 @@
                     class="mt-8 px-8 py-3 rounded-full bg-white/10 text-white backdrop-blur-sm 
                            hover:bg-white/20 transition focus:outline-none focus:ring-2 
                            focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-900"
-                    aria-label="Hear my work" @onclick="NavigateToPortfolio">
+                    aria-label="Hear my work" @onclick="NavigateToPortfolio" @onclick:preventDefault>
                     Hear My Work
                 </button>
             </div>
@@ -56,6 +56,6 @@
 
     private void NavigateToPortfolio()
     {
-        Navigation.NavigateTo("portfolio");
+        Navigation.NavigateTo("/portfolio");
     }
 }
