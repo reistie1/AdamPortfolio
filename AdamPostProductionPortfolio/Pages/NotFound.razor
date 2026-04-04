@@ -1,5 +1,19 @@
 ﻿@page "/not-found"
 @layout MainLayout
 
-<h3>Not Found</h3>
-<p>Redirecting… <a href="/AdamPortfolio/">Go home</a></p>
+<h3>Page Not Found</h3>
+<button
+    class="px-10 py-4 rounded-full bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 transition inline-block focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-900"
+    aria-label="Go to contact page" @onclick="NavigateToHome">
+    Contact Me
+</button>
+
+@code {
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    private void NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}
